@@ -44,6 +44,8 @@ GEM
     coffee-script-source (1.10.0)
     erubis (2.7.0)
     execjs (2.6.0)
+    geocoder (1.2.13)
+    gmaps4rails (2.1.2)
     highline (1.7.8)
     hike (1.2.3)
     i18n (0.7.0)
@@ -60,7 +62,7 @@ GEM
     mime-types (1.25.1)
     minitest (5.8.3)
     multi_json (1.11.2)
-    mysql2 (0.4.2)
+    mysql2 (0.3.20)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-sftp (2.1.2)
@@ -129,9 +131,11 @@ PLATFORMS
 DEPENDENCIES
   capistrano (~> 2.14.2)
   coffee-rails (~> 4.0.0)
+  geocoder
+  gmaps4rails
   jbuilder (~> 2.0)
   jquery-rails
-  mysql2
+  mysql2 (~> 0.3.18)
   rails (= 4.1.2)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
