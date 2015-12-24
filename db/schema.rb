@@ -14,8 +14,8 @@
 ActiveRecord::Schema.define(version: 20151221195100) do
 
   create_table "users", force: true do |t|
-    t.float    "latitude",    limit: 24
-    t.float    "longitutude", limit: 24
+    t.float    "latitude",   limit: 24
+    t.float    "longitude",  limit: 24
     t.string   "address"
     t.string   "title"
     t.datetime "created_at"

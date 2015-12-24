@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     @hash = Gmaps4rails.build_markers(@users) do |user, marker|
       marker.lat user.latitude
       marker.lng user.longitude 
-      marker.infowindow user.description
+      #marker.infowindow user.description
       #marker.picture(
       marker.json({title: user.title}) #prob switch to id
     end
@@ -76,6 +76,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:latitude, :longitutude, :address, :title)
+      params.require(:user).permit(:latitude, :longitude, :address, :title)
     end
 end
