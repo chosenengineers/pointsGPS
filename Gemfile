@@ -44,3 +44,6 @@ end
 
 gem 'geocoder'
 gem 'gmaps4rails'
+
+gem 'ruby_kml' 
+# create kml file for gmaps

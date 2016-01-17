@@ -15,15 +15,15 @@ handler.buildMap({provider: {}, internal: {id: 'map'}}, function(){
 });  
 </script>
 
-<h1>Listing users</h1>
+<h1>Current Users</h1>
 
 <table>
   <thead>
     <tr>
+      <th>ID</th>
       <th>Latitude</th>
       <th>Longitude</th>
       <th>Address</th>
-      <th>Title</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -31,10 +31,10 @@ handler.buildMap({provider: {}, internal: {id: 'map'}}, function(){
   <tbody>
     <% @users.each do |user| %>
       <tr>
+        <td><%= user.title %></td>        
         <td><%= user.latitude %></td>
         <td><%= user.longitude %></td>
         <td><%= user.address %></td>
-        <td><%= user.title %></td>
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -45,4 +45,6 @@ handler.buildMap({provider: {}, internal: {id: 'map'}}, function(){
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
+<%= link_to 'Manual Entry', new_user_path %>
+<%= button_to "Refresh", { :controller => "users", :action => "refresh"} %>
+

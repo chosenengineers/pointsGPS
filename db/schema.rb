@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151221195100) do
+ActiveRecord::Schema.define(version: 20160114220306) do
 
   create_table "users", force: true do |t|
     t.float    "latitude",   limit: 24
@@ -20,6 +20,11 @@ ActiveRecord::Schema.define(version: 20151221195100) do
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "A"
+    t.string   "B"
+    t.string   "C"
+    t.string   "D"
+    t.string   "E"
   end
 
 end
